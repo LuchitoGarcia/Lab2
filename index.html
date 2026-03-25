@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mando Freenove - Lab 2</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; background: #e0e0e0; padding: 20px; }
+        .controls { display: grid; grid-template-columns: repeat(3, 100px); gap: 10px; justify-content: center; margin: 30px; }
+        button { padding: 15px; font-weight: bold; cursor: pointer; border-radius: 8px; border: 1px solid #999; }
+        .stats { background: white; padding: 15px; border-radius: 10px; display: inline-block; text-align: left; min-width: 250px; }
+        .forward { grid-column: 2; }
+    </style>
+</head>
+<body>
+    <h1>Control WiFi - Coche Autónomo</h1>
+    
+    <div class="controls">
+        <button class="forward" onclick="sendCmd('forward')">↑</button>
+        <button onclick="sendCmd('left')">←</button>
+        <button onclick="sendCmd('stop')" style="background: #ffcccc;">STOP</button>
+        <button onclick="sendCmd('right')">→</button>
+        <button class="forward" onclick="sendCmd('backward')">↓</button>
+    </div>
+
+    <div class="stats">
+        <h3>Datos del Coche:</h3>
+        <p>📡 Distancia: <span id="dist">--</span> cm</p>
+        <p>🔋 Batería: <span id="bat">--</span> V</p>
+        <p>🚦 Estado: <span id="status">Esperando...</span></p>
+        <p>🌡️ Temp CPU: <span id="temp">--</span> °C</p>
+        <button onclick="sendCmd('stats')" style="width: 100%;">Actualizar Sensores</button>
+    </div>
+
+    <script src="index.js"></script> </body>
+</html>
