@@ -1,0 +1,14 @@
+{
+  "name": "lab2",
+  "version": "1.0.0",
+  "description": "Control remoto para Freenove 4WD",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^41.0.4"
+  }
+}
